@@ -22,7 +22,8 @@ module XSendFile
   class Plugin    
     @@options = {
       :header => 'X-Sendfile',
-      :render => { :nothing => true }
+      :render => { :nothing => true },
+      :status => 200
     }
     
     # A class attribute that holds the default options for all x_send_file method calls.

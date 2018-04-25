@@ -61,7 +61,9 @@ module XSendFile
       send_file_headers! options
       response.headers[options[:header]] = path
       logger.info "Sending XSendFile header for #{path}" unless logger.nil?
-      render options[:render]
+
+      puts options
+      render options[:render], :status => options[:status]
     end
     
     alias_method :send_file_with_x_send_file, :x_send_file
